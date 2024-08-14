@@ -1,0 +1,26 @@
+version: 2.1
+
+orbs:
+  nx: nrwl/nx@1.6.2
+
+jobs:
+  deploy:
+    docker:
+      - image: circleci/python:3.9
+    resource_class: thiet-ke-nhanh/phat
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Deploy
+          command: bash deploy/deploy.sh $PORTAINER_URL $PORTAINER_API_TOKEN $PORTAINER_ENDPOINT $STACK_ID $DOCKER_ACCESS_TOKEN $CIRCLE_SHA1
+
+workflows:
+  version: 2
+  test-and-deploy:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only: dev

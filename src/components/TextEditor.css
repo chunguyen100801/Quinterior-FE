@@ -1,0 +1,24 @@
+.tox:not(.tox-tinymce-inline) .tox-editor-header,
+.tox .tox-menubar,
+.tox .tox-toolbar-overlord,
+.tox .tox-mbtn,
+.tox .tox-toolbar,
+.tox .tox-toolbar__overflow,
+.tox .tox-toolbar__primary,
+.tox .tox-statusbar,
+.tox .tox-tbtn,
+.tox .tox-tbtn--disabled,
+.tox .tox-tbtn--disabled:hover,
+.tox .tox-tbtn:disabled,
+.tox .tox-tbtn:disabled:hover,
+.mce-content-body {
+  background-color: transparent !important;
+}
+.tox .tox-edit-area::before,
+.tox-tinymce {
+  border-color: #27272a !important;
+}
+
+.tox .tox-tbtn--bespoke {
+  background-color: #27272a !important;
+}

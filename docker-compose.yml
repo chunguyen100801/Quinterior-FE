@@ -1,0 +1,9 @@
+services:
+  fe:
+    image: datn_fe
+    build: .
+    container_name: fe
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
